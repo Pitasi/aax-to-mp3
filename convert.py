@@ -101,11 +101,13 @@ def main(
         # Split a single .mp3 into multiple files based on chapters,
         # the files are put in a folder with the same name of the original mp3
         print('Splitting chapters...')
-        chapters = ffmpeg_split.get_chapters(output_file)
+        chapters = ffmpeg_split.get_chapters(
+            input_file if split_only else output_file
+        )
         ffmpeg_split.convert_chapters(chapters)
         try:
             # Try to delete monolithic mp3 after splitting it.
-            os.remove(output_file)
+            os.remove(input_file if split_only else output_file)
         except FileNotFoundError:
             pass
 
