@@ -86,7 +86,7 @@ reader.
 In some cases the pre built docker image may be useful to use. For example 
 when running on an unsupported environment (macOS).
 ```
-docker run -v <path to>/file.aax:/tmp adamcathersides/aax-mp3:latest -o /tmp/file.aax /tmp/file.mp3
+docker run -v <path to>/file.aax:/tmp adamcathersides/convert:latest -o /tmp/file.aax /tmp/file.mp3
 ```
 
 # In case of problems
