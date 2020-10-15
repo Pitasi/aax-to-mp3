@@ -3,4 +3,4 @@
 	url = https://github.com/Pitasi/ffmpeg_split
 [submodule "tables"]
 	path = tables
-	url = git@github.com:inAudible-NG/tables.git
+	url = https://github.com/inAudible-NG/tables
